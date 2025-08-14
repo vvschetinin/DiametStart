@@ -1,0 +1,21 @@
+@use "@scss/abstract/index";
+
+.logowrap {
+  display: inline-block;
+  height: auto;
+  position: relative;
+  line-height: 0.5;
+}
+
+.logotype {
+  height: 100%;
+  height: 100px;
+  width: auto;
+}
+
+.header.is-active {
+  .logotype {
+    height: 70px;
+    transition: all 0.4s ease;
+  }
+}

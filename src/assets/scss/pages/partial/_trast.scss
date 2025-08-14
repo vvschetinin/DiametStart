@@ -1,0 +1,22 @@
+@use "@scss/abstract/index";
+
+.trast-discription {
+  padding: 2rem 0;
+  color: #fff;
+  h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 22px;
+    line-height: 1.35;
+    font-weight: 300;
+    span {
+      display: block;
+    }
+  }
+  .button {
+    border: 0.2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 1px;
+  }
+}

@@ -1,0 +1,29 @@
+@use "@scss/abstract/index";
+
+.about-discription {
+  position: relative;
+  padding-left: 1rem;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #aa272f;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 400;
+    padding-bottom: 0.25rem;
+  }
+  p {
+    font-size: 22px;
+    line-height: 1.35;
+    font-weight: 400;
+    span {
+      display: block;
+    }
+  }
+}
