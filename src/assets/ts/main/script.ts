@@ -70,3 +70,37 @@ if (formButton && formCheck) {
 } else {
   console.error("Один из элементов формы не найден");
 }
+
+// ====================== Изменение заголовка формы ======================== //
+
+// Выбираем все кнопки, которые должны открывать форму.
+// Используем утверждение типа 'as NodeListOf<HTMLButtonElement>', чтобы TypeScript
+// знал, что мы работаем именно с элементами кнопок.
+const contactButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll(".js-startcontact");
+
+// Выбираем заголовок формы.
+// Тип 'HTMLHeadingElement | null' указывает, что элемент может быть не найден.
+const formTitle: HTMLHeadingElement | null = document.querySelector(".h1-inner");
+
+// Проверяем, существуют ли кнопки и заголовок на странице,
+// чтобы избежать ошибок во время выполнения.
+if (contactButtons.length > 0 && formTitle) {
+  // Перебираем каждую кнопку из найденных.
+  contactButtons.forEach((button) => {
+    // Добавляем обработчик события 'click' для каждой кнопки.
+    button.addEventListener("click", () => {
+      // При клике на кнопку, получаем ее текстовое содержимое.
+      // Используем 'button.textContent' и проверяем, что оно не null или пустое.
+      const buttonText = button.textContent;
+
+      // Если у кнопки есть текст, устанавливаем его как текст заголовка формы.
+      if (buttonText) {
+        formTitle.textContent = buttonText.trim(); // .trim() убирает лишние пробелы
+      }
+    });
+  });
+} else {
+  // Выводим сообщение в консоль, если не удалось найти необходимые элементы.
+  // Это поможет при отладке.
+  console.warn("Не удалось найти кнопки для открытия формы или заголовок формы.");
+}
