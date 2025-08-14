@@ -82,25 +82,34 @@ const contactButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll(
 // Тип 'HTMLHeadingElement | null' указывает, что элемент может быть не найден.
 const formTitle: HTMLHeadingElement | null = document.querySelector(".h1-inner");
 
-// Проверяем, существуют ли кнопки и заголовок на странице,
+// НОВОЕ: Выбираем скрытое поле по его атрибуту name.
+// Тип 'HTMLInputElement | null' говорит TypeScript, что это поле ввода или null.
+const subjectInput: HTMLInputElement | null = document.querySelector('input[name="subject"]');
+
+// Проверяем, существуют ли ВСЕ необходимые элементы на странице,
 // чтобы избежать ошибок во время выполнения.
-if (contactButtons.length > 0 && formTitle) {
+if (contactButtons.length > 0 && formTitle && subjectInput) {
   // Перебираем каждую кнопку из найденных.
   contactButtons.forEach((button) => {
     // Добавляем обработчик события 'click' для каждой кнопки.
     button.addEventListener("click", () => {
       // При клике на кнопку, получаем ее текстовое содержимое.
       // Используем 'button.textContent' и проверяем, что оно не null или пустое.
-      const buttonText = button.textContent;
+      // .trim() убирает лишние пробелы по краям.
+      const buttonText = button.textContent?.trim();
 
-      // Если у кнопки есть текст, устанавливаем его как текст заголовка формы.
+      // Если у кнопки есть текст, обновляем и заголовок, и скрытое поле.
       if (buttonText) {
-        formTitle.textContent = buttonText.trim(); // .trim() убирает лишние пробелы
+        // 1. Устанавливаем текст заголовка формы.
+        formTitle.textContent = buttonText;
+
+        // 2. НОВОЕ: Устанавливаем значение 'value' для скрытого поля.
+        subjectInput.value = buttonText;
       }
     });
   });
 } else {
-  // Выводим сообщение в консоль, если не удалось найти необходимые элементы.
+  // Выводим более детальное сообщение в консоль, если что-то не найдено.
   // Это поможет при отладке.
-  console.warn("Не удалось найти кнопки для открытия формы или заголовок формы.");
+  console.warn("Не удалось найти один или несколько элементов");
 }

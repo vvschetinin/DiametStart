@@ -1,6 +1,6 @@
 @use "@scss/abstract/index";
 
-.about-discription {
+.repair-discription {
   position: relative;
   padding-left: 1rem;
   &:before {
@@ -11,12 +11,6 @@
     bottom: 0;
     width: 2px;
     background-color: #aa272f;
-  }
-  h2 {
-    font-size: 24px;
-    line-height: 1.2;
-    font-weight: 400;
-    padding-bottom: 0.25rem;
   }
   p {
     font-size: 22px;
