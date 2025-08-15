@@ -41,11 +41,18 @@
     font-size: 22px;
     line-height: 1.35;
     font-weight: 300;
+    padding-left: 2rem;
     span {
       display: block;
     }
     & + li {
       margin-top: 0.5rem;
+    }
+    &:before {
+      content: "★";
+      position: absolute;
+      left: 0;
+      color: #aa272f;
     }
   }
 }

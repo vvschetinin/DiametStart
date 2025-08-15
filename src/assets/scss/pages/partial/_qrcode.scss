@@ -1,0 +1,36 @@
+@use "@scss/abstract/index";
+
+.qrcode-imgwrap {
+  padding-top: 50%;
+  @include index.minMedia(1100px) {
+    height: 100%;
+    padding-top: 0;
+  }
+}
+
+.qrcode-discription {
+  position: relative;
+  padding: 1rem 0;
+  margin-top: 2.5rem;
+  @include index.minMedia(1100px) {
+    margin-top: 0;
+    padding: 2rem 0;
+  }
+  p {
+    font-size: 22px;
+    line-height: 1.35;
+    font-weight: 400;
+    span {
+      display: block;
+    }
+  }
+  .qrcode {
+    display: block;
+    width: 100%;
+    max-width: 170px;
+    height: auto;
+    @include index.minMedia(1100px) {
+      max-width: 200px;
+    }
+  }
+}
