@@ -73,43 +73,24 @@ if (formButton && formCheck) {
 
 // ====================== Изменение заголовка формы ======================== //
 
-// Выбираем все кнопки, которые должны открывать форму.
-// Используем утверждение типа 'as NodeListOf<HTMLButtonElement>', чтобы TypeScript
-// знал, что мы работаем именно с элементами кнопок.
 const contactButtons: NodeListOf<HTMLButtonElement> = document.querySelectorAll(".js-startcontact");
 
-// Выбираем заголовок формы.
-// Тип 'HTMLHeadingElement | null' указывает, что элемент может быть не найден.
 const formTitle: HTMLHeadingElement | null = document.querySelector(".h1-inner");
 
-// НОВОЕ: Выбираем скрытое поле по его атрибуту name.
-// Тип 'HTMLInputElement | null' говорит TypeScript, что это поле ввода или null.
 const subjectInput: HTMLInputElement | null = document.querySelector('input[name="subject"]');
 
-// Проверяем, существуют ли ВСЕ необходимые элементы на странице,
-// чтобы избежать ошибок во время выполнения.
 if (contactButtons.length > 0 && formTitle && subjectInput) {
-  // Перебираем каждую кнопку из найденных.
   contactButtons.forEach((button) => {
-    // Добавляем обработчик события 'click' для каждой кнопки.
     button.addEventListener("click", () => {
-      // При клике на кнопку, получаем ее текстовое содержимое.
-      // Используем 'button.textContent' и проверяем, что оно не null или пустое.
-      // .trim() убирает лишние пробелы по краям.
       const buttonText = button.textContent?.trim();
 
-      // Если у кнопки есть текст, обновляем и заголовок, и скрытое поле.
       if (buttonText) {
-        // 1. Устанавливаем текст заголовка формы.
         formTitle.textContent = buttonText;
 
-        // 2. НОВОЕ: Устанавливаем значение 'value' для скрытого поля.
         subjectInput.value = buttonText;
       }
     });
   });
 } else {
-  // Выводим более детальное сообщение в консоль, если что-то не найдено.
-  // Это поможет при отладке.
   console.warn("Не удалось найти один или несколько элементов");
 }
