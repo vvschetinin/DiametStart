@@ -8,7 +8,7 @@ if (form && overlay) {
     const formData = new FormData(form);
 
     try {
-      const response = await fetch("sendform.php", {
+      const response = await fetch("/sendform.php", {
         method: "POST",
         body: formData,
       });
