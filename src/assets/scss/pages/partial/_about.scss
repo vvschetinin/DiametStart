@@ -2,7 +2,9 @@
 
 .about-discription {
   position: relative;
-  padding-left: 1rem;
+  @include index.minMedia(800px) {
+    padding-left: 1rem;
+  }
   &:before {
     content: "";
     position: absolute;
@@ -11,6 +13,10 @@
     bottom: 0;
     width: 2px;
     background-color: #aa272f;
+    display: none;
+    @include index.minMedia(800px) {
+      display: inline-block;
+    }
   }
   h2 {
     font-size: 22px;

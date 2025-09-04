@@ -1,24 +1,25 @@
 @use "@scss/abstract/index";
 
 .dostart-imgwrap {
-  height: 100%;
+  padding-top: 70%;
+  @include index.minMedia(550px) {
+    padding-top: 60%;
+  }
+  @include index.minMedia(800px) {
+    height: 100%;
+  }
 }
 
 .dostart-discription {
   position: relative;
   padding: 1rem 0;
-  padding-left: 1rem;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 2px;
-    background-color: #aa272f;
+  margin-bottom: 2rem;
+  @include index.minMedia(800px) {
+    margin-bottom: 3rem;
   }
   @include index.minMedia(1100px) {
     padding-bottom: 2rem;
+    margin-bottom: 0;
     padding-left: 0;
     &:before {
       display: none;
