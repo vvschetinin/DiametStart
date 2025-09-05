@@ -178,14 +178,16 @@
           <meta
             itemprop="description"
             content="Профессиональный ремонт и обслуживание автокранов, кранов-манипуляторов, подъемников и погрузчиков в Ивантеевке и Московской области." />
-          <meta itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" />
-          <meta itemprop="streetAddress" content="ул. Заводская, д. 10-А" />
-          <meta itemprop="addressLocality" content="Ивантеевка, Московская область" />
-          <meta itemprop="postalCode" content="141280" />
-          <meta itemprop="addressCountry" content="RU" />
-          <meta itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates" />
-          <meta itemprop="latitude" content="55.9716" />
-          <meta itemprop="longitude" content="37.9208" />
+          <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+            <meta itemprop="streetAddress" content="ул. Заводская, д. 10-А" />
+            <meta itemprop="addressLocality" content="Ивантеевка, Московская область" />
+            <meta itemprop="postalCode" content="141280" />
+            <meta itemprop="addressCountry" content="RU" />
+          </div>
+          <div itemprop="geo" itemscope itemtype="https://schema.org/GeoCoordinates">
+            <meta itemprop="latitude" content="55.9716" />
+            <meta itemprop="longitude" content="37.9208" />
+          </div>
           <div class="container">
             <div class="row justify-end">
               <div class="col-80--md col-70--lg">
@@ -224,7 +226,7 @@
           id="trast"
           class="section-type trast bg--cover visual-bg"
           style="background-image: url(/assets/images/trast/113.webp)"
-          aria-describedby="Сертифицированный ремонт спецтехники в Москве, Ивантеевке и Моссковской области"
+          aria-describedby="service-description"
           itemscope
           itemtype="https://schema.org/Service">
           <meta itemprop="serviceType" content="Ремонт и обслуживание автокранов, кранов-манипуляторов, подъемников и погрузчиков" />
@@ -238,6 +240,7 @@
             <meta itemprop="availability" content="https://schema.org/InStock" />
             <meta itemprop="itemOffered" content="Ремонт и обслуживание спецтехники" />
           </div>
+          <div id="service-description" style="display: none">Сертифицированный ремонт спецтехники в Москве, Ивантеевке и Московской области</div>
           <div class="container">
             <div class="row justify-end">
               <div class="col-80--md col-70--lg">
@@ -281,11 +284,13 @@
             <meta itemprop="availability" content="https://schema.org/InStock" />
             <meta itemprop="itemOffered" content="Ремонт и обслуживание спецтехники" />
           </div>
-          <div itemprop="areaServed" itemscope itemtype="https://schema.org/GeoCircle">
-            <meta itemprop="geoMidpoint" itemscope itemtype="https://schema.org/GeoCoordinates" />
-            <meta itemprop="latitude" content="55.9716" />
-            <meta itemprop="longitude" content="37.9208" />
-            <meta itemprop="geoRadius" content="50000" />
+          <div itemscope itemtype="https://schema.org/GeoCircle">
+            <div itemprop="geoMidpoint" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="55.870000" />
+              <meta itemprop="longitude" content="37.570000" />
+            </div>
+            <meta itemprop="radius" content="15000" />
+            <!-- 15 км -->
           </div>
           <div class="container">
             <div class="row justify-end">
@@ -332,12 +337,7 @@
               <div class="col-50--md">
                 <div class="card-item">
                   <div class="visual-bg-light">
-                    <img
-                      src="/assets/images/card/33.webp"
-                      alt="Производственная база НВП Диамет для ремонта спецтехники в Ивантеевке"
-                      loading="lazy"
-                      itemprop="image"
-                      aria-describedby="card-img-desc-1" />
+                    <img src="/assets/images/card/33.webp" alt="Производственная база НВП Диамет для ремонта спецтехники в Ивантеевке" loading="lazy" itemprop="image" />
                   </div>
                   <article class="card-content" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
                     <meta itemprop="serviceType" content="Ремонт и обслуживание спецтехники" />
@@ -359,12 +359,7 @@
               <div class="col-50--md">
                 <div class="card-item mt-1 mt-0--md">
                   <div class="visual-bg-light">
-                    <img
-                      src="/assets/images/card/42.webp"
-                      alt="Гарантия качества ремонта спецтехники в Ивантеевке"
-                      loading="lazy"
-                      itemprop="image"
-                      aria-describedby="card-img-desc-2" />
+                    <img src="/assets/images/card/42.webp" alt="Гарантия качества ремонта спецтехники в Ивантеевке" loading="lazy" itemprop="image" />
                   </div>
                   <article class="card-content" itemprop="itemListElement" itemscope itemtype="https://schema.org/Service">
                     <meta itemprop="serviceType" content="Ремонт и обслуживание спецтехники" />
@@ -399,11 +394,13 @@
             <meta itemprop="availability" content="https://schema.org/InStock" />
             <meta itemprop="itemOffered" content="Ремонт и обслуживание спецтехники" />
           </div>
-          <div itemprop="areaServed" itemscope itemtype="https://schema.org/GeoCircle">
-            <meta itemprop="geoMidpoint" itemscope itemtype="https://schema.org/GeoCoordinates" />
-            <meta itemprop="latitude" content="55.9716" />
-            <meta itemprop="longitude" content="37.9208" />
-            <meta itemprop="geoRadius" content="50000" />
+          <div itemscope itemtype="https://schema.org/GeoCircle">
+            <div itemprop="geoMidpoint" itemscope itemtype="https://schema.org/GeoCoordinates">
+              <meta itemprop="latitude" content="55.870000" />
+              <meta itemprop="longitude" content="37.570000" />
+            </div>
+            <meta itemprop="radius" content="15000" />
+            <!-- 15 км -->
           </div>
           <div class="container">
             <div class="row">
@@ -460,12 +457,8 @@
                   </div>
                 </article>
               </div>
-
               <div class="col-55--lg col-60--xl">
-                <div
-                  class="dostart-imgwrap visual-bg-light bg--cover"
-                  style="background-image: url(/assets/images/dostart/112.webp)"
-                  aria-describedby="dostart-bg-desc"></div>
+                <div class="dostart-imgwrap visual-bg-light bg--cover" style="background-image: url(/assets/images/dostart/112.webp)"></div>
               </div>
             </div>
           </div>
@@ -477,7 +470,7 @@
               <article class="col-100 col-80--xl">
                 <h2 class="h2-title deco-line">Часто задаваемые вопросы</h2>
                 <ul class="faq-list">
-                  <li itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <li itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <h3 class="faq-question" itemprop="name">
                       <button id="faq1" aria-expanded="false" aria-controls="answer1" tabindex="0">Какие виды спецтехники ремонтирует НВП Диамет в Ивантеевке?</button>
                     </h3>
