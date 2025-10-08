@@ -33,3 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
   (elements[index1] as HTMLElement).style.display = "";
   (elements[index2] as HTMLElement).style.display = "";
 });
+
+// ==================== truncateArticleText.ts ===============
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Настраиваемая длина текста в символах (с пробелами)
+  const maxLength: number = 340;
+
+  // Находим все параграфы с классом article-prev внутри article-wrap
+  const paragraphs = document.querySelectorAll(".article-wrap .article-prev");
+
+  paragraphs.forEach((p: Element) => {
+    const para = p as HTMLElement;
+    let text = para.textContent || para.innerText || "";
+
+    // Обрезаем текст, если он длиннее лимита
+    if (text.length > maxLength) {
+      const truncated = text.slice(0, maxLength - 3) + "...";
+      para.textContent = truncated; // Заменяем содержимое, скрывая остаток
+    }
+    // Если короче или равно, текст остается без изменений
+  });
+});
