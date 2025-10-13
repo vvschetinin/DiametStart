@@ -3,12 +3,18 @@
 .mainarticle-content {
   margin-top: 2rem;
   h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 400;
     padding: 1rem 0 0.5rem 0;
+    @include index.minMedia(550px) {
+      font-size: 24px;
+    }
   }
   p {
-    font-size: 18px;
+    font-size: 17px;
+    @include index.minMedia(550px) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -17,7 +23,10 @@
   padding-left: 2rem;
   li {
     position: relative;
-    font-size: 18px;
+    font-size: 17px;
+    @include index.minMedia(550px) {
+      font-size: 18px;
+    }
     &:before {
       content: "*";
       position: absolute;
