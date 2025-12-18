@@ -1,0 +1,13 @@
+@use "@scss/abstract/index";
+
+.partner-logo {
+  margin: 0 auto;
+  padding: 0;
+  @include index.minMedia(550px) {
+    padding: 0 0.25rem;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
