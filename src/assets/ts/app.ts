@@ -1,5 +1,5 @@
 import "@/assets/ts/components/articles/main";
-import "@/assets/ts/components/cdn/main";
+// import "@/assets/ts/components/cdn/main";
 import "@/assets/ts/components/cookie/main";
 import "@/assets/ts/components/formsend/formsend";
 import "@/assets/ts/components/inputmask/main";
